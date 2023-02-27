@@ -10,7 +10,14 @@ public class Main {
 
         int result = numbers.stream().filter(n -> n%2==0).map(n -> n*n).reduce(0, (a, b) -> a+b);
 
-        System.out.println("Hello world! " + result);
+        List<String> strs = Arrays.asList("Larb it is my cybername",
+                "You don't know who i am",
+                "I am from your brain",
+                "Scare me");
+
+        List<String> resultList = strs.stream().filter(n -> !n.contains("Larb")).toList();
+
+        System.out.println(resultList);
 
 
     }
